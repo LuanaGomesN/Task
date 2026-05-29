@@ -74,7 +74,6 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/white"/>
 
-
             <TextView
                 android:id="@+id/btnRecover"
                 android:layout_width="wrap_content"
