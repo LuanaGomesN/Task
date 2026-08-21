@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.luana.task.R
 import com.luana.task.databinding.FragmentLoginBinding
 import com.luana.task.databinding.FragmentRecoverAccountBinding
+import com.luana.task.util.initToolbar
 
 
 class RecoverAccountFragment : Fragment() {
@@ -20,6 +21,11 @@ class RecoverAccountFragment : Fragment() {
     ): View {
         _binding = FragmentRecoverAccountBinding.inflate(inflater,container,false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
     }
 
     override fun onDestroyView() {
