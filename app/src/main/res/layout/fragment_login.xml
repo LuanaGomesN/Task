@@ -25,8 +25,10 @@
             android:textColor="@color/white"/>
 
         <EditText
+            android:id="@+id/edittextEmail"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            style="@style/EditTextTheme"
             android:hint="Digite seu e-mail"
             android:inputType="textEmailAddress"
             android:padding="10dp"
@@ -41,8 +43,10 @@
             android:layout_marginTop="16dp"/>
 
         <EditText
+            android:id="@+id/edittextSenha"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            style="@style/EditTextTheme"
             android:inputType="textPassword"
             android:hint="Digite sua senha"
             android:padding="10dp"

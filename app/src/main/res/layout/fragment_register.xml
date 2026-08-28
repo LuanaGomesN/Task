@@ -44,6 +44,7 @@
             android:textColor="@color/white"/>
 
         <EditText
+            android:id="@+id/edittextEmail"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="Digite seu e-mail"
@@ -60,6 +61,7 @@
             android:layout_marginTop="16dp"/>
 
         <EditText
+            android:id="@+id/edittextSenha"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:inputType="textPassword"
@@ -69,6 +71,7 @@
             android:background="@drawable/bg_edit_text"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar"
