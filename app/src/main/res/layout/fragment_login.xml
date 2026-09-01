@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E-mail"
+            android:text="@string/email_text"
             android:textColor="@color/white"/>
 
         <EditText
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             style="@style/EditTextTheme"
-            android:hint="Digite seu e-mail"
+            android:hint="@string/hint_edit_email"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:layout_marginTop="4dp"
@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Senha"
+            android:text="@string/password_text"
             android:textColor="@color/white"
             android:layout_marginTop="16dp"/>
 
@@ -58,10 +58,9 @@
             android:layout_height="wrap_content"
             android:text="Login"
             android:id="@+id/buttonLogin"
-            android:textColor="@color/color_default"
             app:backgroundTint="@null"
             android:layout_marginTop="16dp"
-            android:background="@drawable/bg_btn"/>
+            style="@style/ButtonTheme" />
 
         <LinearLayout
             android:layout_width="match_parent"
