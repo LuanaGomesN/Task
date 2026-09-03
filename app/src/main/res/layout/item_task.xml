@@ -41,7 +41,7 @@
             android:layout_height="48dp"
             android:background="@android:color/transparent"
             android:contentDescription="Anterior"
-            android:src="@drawable/back"
+            android:src="@drawable/icback"
             app:layout_constraintBottom_toBottomOf="@+id/buttonEditar"
             app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
             app:layout_constraintStart_toStartOf="parent"

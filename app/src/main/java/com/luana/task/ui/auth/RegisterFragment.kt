@@ -46,15 +46,16 @@ class RegisterFragment : Fragment() {
             if (senha.isNotBlank()) {
                 Toast.makeText(requireContext(), "Tudo ok!", Toast.LENGTH_SHORT).show()
             } else {
-                showBottomSheet(message = R.string.password_empty_register_fragment)
+                showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
         } else {
-            showBottomSheet(message = R.string.email_empty_register_fragment)
+            showBottomSheet(message = getString(R.string.email_empty_register_fragment))
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
     }
 }

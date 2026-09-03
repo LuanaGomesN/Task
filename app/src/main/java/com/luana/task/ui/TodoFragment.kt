@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.luana.task.R
+import com.luana.task.data.model.Status
+import com.luana.task.data.model.Task
 import com.luana.task.databinding.FragmentTodoBinding
 import com.luana.task.ui.adapter.TaskAdapter
 
@@ -28,6 +30,8 @@ class TodoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
+
+        initRecyclerViewTask(getTask())
     }
 
     private fun initListeners(){
@@ -38,11 +42,19 @@ class TodoFragment : Fragment() {
 
     private fun initRecyclerViewTask(taskList: List<Task>){
         taskAdapter = TaskAdapter(taskList)
-        binding.recyclerViewTask.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerViewTask.setHasFixedSize(true)
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.setHasFixedSize(true)
 
-        binding.recyclerViewTask.adapter = taskAdapter
+        binding.recyclerView.adapter = taskAdapter
     }
+
+    private fun getTask() = listOf(
+        Task("0", "Criar nova tela do app",Status.TODO),
+        Task("0", "Validar informações na tela de login",Status.TODO),
+        Task("0", "Adicionar nova funcionalidade no app",Status.TODO),
+        Task("0", "Salvar token localmente",Status.TODO),
+        Task("0", "Criar funcionalidade de logout no app",Status.TODO),
+        )
 
     override fun onDestroyView() {
         super.onDestroyView()
