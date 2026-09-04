@@ -48,7 +48,7 @@ class TodoFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
             setHasFixedSize(true)
             adapter = taskAdapter
-        }
+        } 
     }
 
     private fun optionSelected(task: Task, option: Int){
