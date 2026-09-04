@@ -35,4 +35,9 @@
         <item name="bottomSheetStyle">@style/bottomSheetDialogWrapper</item>
     </style>
 
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/color_status_done</item>
+    </style>
+
 </resources>

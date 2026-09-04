@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.luana.task"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.luana.task"

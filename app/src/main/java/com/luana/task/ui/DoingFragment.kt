@@ -42,11 +42,14 @@ class DoingFragment : Fragment() {
     //}
 
     private fun initRecyclerViewTask(taskList: List<Task>){
-        taskAdapter = TaskAdapter(taskList)
+        taskAdapter = TaskAdapter(requireContext(), taskList) {task, option -> optionSelected(task, option)}
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.setHasFixedSize(true)
-
         binding.recyclerView.adapter = taskAdapter
+    }
+
+    private fun optionSelected(task:Task, option:Int){
+
     }
 
     private fun getTask() = listOf(

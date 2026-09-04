@@ -46,7 +46,7 @@
             app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/buttonEditar"
-            app:tint="@color/color_default" />
+            app:tint="@color/orange" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDelete"
@@ -108,7 +108,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/buttonDetails"
             app:layout_constraintTop_toTopOf="@+id/buttonEditar"
-            app:tint="@color/color_default" />
+            app:tint="@color/green" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -53,13 +53,13 @@ class DoneFragment : Fragment() {
         Task("0", "Criar nova tela do app",Status.DONE),
         Task("1", "Validar informações na tela de login",Status.DONE),
         Task("2", "Adicionar nova funcionalidade no app",Status.DONE),
-        Task("3", "Salvar token localmente",Status.DONE,
+        Task("3", "Salvar token localmente",Status.DONE),
         Task("4", "Criar funcionalidade de logout no app",Status.DONE),
     )
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding=null
+        _binding = null
     }
 
 }
