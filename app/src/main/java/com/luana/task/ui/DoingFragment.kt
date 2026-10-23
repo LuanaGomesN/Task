@@ -30,22 +30,21 @@ class DoingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //initListeners()
-
-        initRecyclerViewTask(getTask())
+        initRecyclerViewTask()
+        getTask()
     }
 
-    //private fun initListeners(){
-    //binding.floatingActionButton2.setOnClickListener {
-    //findNavController().navigate((R.id.action_homeFragment_to_formTaskFragment))
-    //}
-    //}
 
-    private fun initRecyclerViewTask(taskList: List<Task>){
-        taskAdapter = TaskAdapter(requireContext(), taskList) {task, option -> optionSelected(task, option)}
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerView.setHasFixedSize(true)
-        binding.recyclerView.adapter = taskAdapter
+    private fun initRecyclerViewTask(){
+
+
+        taskAdapter = TaskAdapter(requireContext() ) {task, option -> optionSelected(task, option)}
+
+        with(binding.recyclerView) {
+            layoutManager = LinearLayoutManager(requireContext())
+            setHasFixedSize(true)
+            adapter = taskAdapter
+        }
     }
 
     private fun optionSelected(task:Task, option:Int){

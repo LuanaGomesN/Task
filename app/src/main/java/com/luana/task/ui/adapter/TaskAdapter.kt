@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.luana.task.R
@@ -14,7 +15,7 @@ import com.luana.task.databinding.ItemTaskBinding
 class TaskAdapter(
     private val context: Context,
     private val taskSeleted: (Task, Int) -> Unit
-) : ListAdapter<Task, TaskAdapter.MyViewHolder>(DIFF_CALBACK) {
+) : ListAdapter<Task, TaskAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
     companion object {
         val SELECT_BACK: Int = 1

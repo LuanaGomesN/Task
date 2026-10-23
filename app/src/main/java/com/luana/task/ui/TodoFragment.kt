@@ -42,13 +42,15 @@ class TodoFragment : Fragment() {
     }
 
     private fun initRecyclerViewTask(){
-        taskAdapter = TaskAdapter(requireContext(), ) {task, option -> optionSelected(task, option)}
 
-        with(binding.recyclerViewTask){
+
+        taskAdapter = TaskAdapter(requireContext() ) {task, option -> optionSelected(task, option)}
+
+        with(binding.recyclerView) {
             layoutManager = LinearLayoutManager(requireContext())
             setHasFixedSize(true)
             adapter = taskAdapter
-        } 
+        }
     }
 
     private fun optionSelected(task: Task, option: Int){
