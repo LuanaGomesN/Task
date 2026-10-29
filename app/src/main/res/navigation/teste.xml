@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teste"
+    app:startDestination="@id/splashFragment2">
+
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.luana.task.ui.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment2_to_autentication1"
+            app:destination="@id/autentication1" />
+        <action
+            android:id="@+id/action_splashFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <navigation android:id="@+id/autentication1"
+        app:startDestination="@id/loginFragment2">
+        <fragment
+            android:id="@+id/loginFragment2"
+            android:name="com.luana.task.ui.auth.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment2_to_registerFragment2"
+                app:destination="@id/registerFragment2" />
+            <action
+                android:id="@+id/action_loginFragment2_to_recoverAccountFragment2"
+                app:destination="@id/recoverAccountFragment2" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerFragment2"
+            android:name="com.luana.task.ui.auth.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register" />
+        <fragment
+            android:id="@+id/recoverAccountFragment2"
+            android:name="com.luana.task.ui.auth.RecoverAccountFragment"
+            android:label="fragment_recover_account"
+            tools:layout="@layout/fragment_recover_account" />
+        <action
+            android:id="@+id/action_global_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </navigation>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.luana.task.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_formTaskFragment2"
+            app:destination="@id/formTaskFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/formTaskFragment2"
+        android:name="com.luana.task.ui.FormTaskFragment"
+        android:label="fragment_form_task"
+        tools:layout="@layout/fragment_form_task" />
+</navigation>

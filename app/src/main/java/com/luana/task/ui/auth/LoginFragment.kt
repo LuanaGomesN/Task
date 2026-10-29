@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
             if (currentUser !=null){
                 findNavController().navigate(R.id.action_global_homeFragment)
             }else{
-                findNavController().navigate(R.id.action_splashFragment_to_autentication)
+                findNavController().navigate(R.id.action_splashFragment_to_autentication2)
             }
 
         }catch(e:Exception){
@@ -83,7 +83,7 @@ class LoginFragment : Fragment() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if(task.isSuccessful){
-                        findNavController().navigate(R.id.action_global_homeFragment)
+                        //findNavController().navigate(R.id.action_global_homeFragment)
                     }else{
                         Toast.makeText(requireContext(),task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
