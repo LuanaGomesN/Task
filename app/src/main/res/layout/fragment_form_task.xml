@@ -112,7 +112,7 @@
            android:background="@drawable/bg_btn"
            android:text="Salvar"
            android:textAllCaps="false"
-           android:textColor="@color/color_default"
+           android:textColor="@color/white"
            android:backgroundTint="@null"
            app:layout_editor_absoluteX="16dp"
            app:layout_editor_absoluteY="221dp"
