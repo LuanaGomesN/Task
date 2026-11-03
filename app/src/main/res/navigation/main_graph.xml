@@ -41,6 +41,13 @@
         <action
             android:id="@+id/action_homeFragment_to_formTaskFragment"
             app:destination="@id/formTaskFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_autentication"
+            app:destination="@id/autentication"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+
     </fragment>
     <fragment
         android:id="@+id/formTaskFragment"
@@ -52,7 +59,7 @@
         android:name="com.luana.task.ui.SplashFragment"
         android:label="SplashFragment" >
         <action
-            android:id="@+id/action_splashFragment_to_autentication2"
+            android:id="@+id/action_splashFragment_to_autentication"
             app:destination="@id/autentication" />
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"

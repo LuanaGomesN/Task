@@ -40,4 +40,9 @@
         <item name="colorControlActivated">@color/color_status_done</item>
     </style>
 
+    <!-- Home fragment -->
+    <string name="text_title_dialog_confira_logout">Deseja sair da sua conta?</string>
+    <string name="text_button_dialog_confirm_logout">Confirmar</string>
+    <string name="text_message_dialog_confirm_logout">Aperte em confirmar para sair da sua conta</string>
+
 </resources>

@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
             if (currentUser !=null){
                 findNavController().navigate(R.id.action_global_homeFragment)
             }else{
-                findNavController().navigate(R.id.action_splashFragment_to_autentication2)
+                findNavController().navigate(R.id.action_splashFragment_to_autentication)
             }
 
         }catch(e:Exception){
