@@ -67,31 +67,33 @@ class LoginFragment : Fragment() {
         val senha = binding.edittextSenha.text.toString().trim()
         if(email.isNotBlank()){
             if(senha.isNotBlank()){
+                binding.progressBar.isVisible = true
                 loginUser(email,senha)
             }else{
-                Toast.makeText(requireContext(),"Preencha a senha!", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = "preencha a senha!")
             }
 
         }else{
-            Toast.makeText(requireContext(),"Preencha a senha!", Toast.LENGTH_SHORT).show()
-
+            showBottomSheet(message = getString(R.string.email_empty))
         }
     }
 
     private fun loginUser(email: String, password: String){
         try {
-            auth.signInWithEmailAndPassword(email, password)
+            auth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener { task ->
                     if(task.isSuccessful){
-                        //findNavController().navigate(R.id.action_global_homeFragment)
+                        //Conseguiu autenticar com sucesso
+                        findNavController().navigate((R.id.action_global_homeFragment))
                     }else{
-                        Toast.makeText(requireContext(),task.exception?.message, Toast.LENGTH_SHORT).show()
+                        //Ocorreu falha na autenticação
+                        binding.progressBar.isVisible = false
+                        Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
-        }catch (e: Exception){
-            Toast.makeText(requireContext(),e.message.toString(),Toast.LENGTH_SHORT).show()
+        }catch ( e: Exception){
+            Toast.makeText(requireContext(), e.message.toString(), Toast.LENGTH_SHORT).show()
         }
-
     }
 
     override fun onDestroyView() {
